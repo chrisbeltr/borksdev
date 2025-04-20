@@ -1,0 +1,1248 @@
+@font-face {
+  font-family: "GrapeSoda";
+  src: url(fonts/GrapeSoda.ttf);
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --banner-multiplier: 8;
+  --banner-height: calc(5px * var(--banner-multiplier));
+  --banner-container-width: calc(100px * var(--banner-multiplier));
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: hsl(253, 100%, 3%);
+  animation: 10s linear 0s infinite forwards background;
+  color: white;
+  font-family: "GrapeSoda";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nointeract {
+  pointer-events: none;
+}
+
+.noselect {
+  user-select: none;
+}
+
+.container {
+  padding: 20px;
+  margin: 20px;
+  width: 800px;
+  overflow: hidden;
+  background-color: black;
+  border: 5px solid #202020;
+  border-radius: 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-size: 6rem;
+  line-height: 3rem;
+}
+
+.banner-container {
+  max-width: var(--banner-container-width);
+  height: var(--banner-height);
+  overflow: hidden;
+}
+
+.banner {
+  height: var(--banner-height);
+  image-rendering: pixelated;
+  animation: 5s linear 0s infinite forwards banner;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 5px 10px;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 1rem;
+}
+
+.about > p {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+/* colors */
+#y {
+  color: #ffff91;
+}
+
+#r {
+  color: #ff9191;
+}
+
+#b {
+  color: #6bb8ff;
+}
+
+#p {
+  color: #ff91e4;
+}
+
+#m {
+  color: #91ff99;
+}
+
+#o {
+  color: #ffc891;
+}
+
+@keyframes banner {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes background {
+  0% {
+    background-color: hsl(0, 100%, 3%);
+  }
+  0.2777777778% {
+    background-color: hsl(1, 100%, 3%);
+  }
+  0.5555555556% {
+    background-color: hsl(2, 100%, 3%);
+  }
+  0.8333333333% {
+    background-color: hsl(3, 100%, 3%);
+  }
+  1.1111111111% {
+    background-color: hsl(4, 100%, 3%);
+  }
+  1.3888888889% {
+    background-color: hsl(5, 100%, 3%);
+  }
+  1.6666666667% {
+    background-color: hsl(6, 100%, 3%);
+  }
+  1.9444444444% {
+    background-color: hsl(7, 100%, 3%);
+  }
+  2.2222222222% {
+    background-color: hsl(8, 100%, 3%);
+  }
+  2.5% {
+    background-color: hsl(9, 100%, 3%);
+  }
+  2.7777777778% {
+    background-color: hsl(10, 100%, 3%);
+  }
+  3.0555555556% {
+    background-color: hsl(11, 100%, 3%);
+  }
+  3.3333333333% {
+    background-color: hsl(12, 100%, 3%);
+  }
+  3.6111111111% {
+    background-color: hsl(13, 100%, 3%);
+  }
+  3.8888888889% {
+    background-color: hsl(14, 100%, 3%);
+  }
+  4.1666666667% {
+    background-color: hsl(15, 100%, 3%);
+  }
+  4.4444444444% {
+    background-color: hsl(16, 100%, 3%);
+  }
+  4.7222222222% {
+    background-color: hsl(17, 100%, 3%);
+  }
+  5% {
+    background-color: hsl(18, 100%, 3%);
+  }
+  5.2777777778% {
+    background-color: hsl(19, 100%, 3%);
+  }
+  5.5555555556% {
+    background-color: hsl(20, 100%, 3%);
+  }
+  5.8333333333% {
+    background-color: hsl(21, 100%, 3%);
+  }
+  6.1111111111% {
+    background-color: hsl(22, 100%, 3%);
+  }
+  6.3888888889% {
+    background-color: hsl(23, 100%, 3%);
+  }
+  6.6666666667% {
+    background-color: hsl(24, 100%, 3%);
+  }
+  6.9444444444% {
+    background-color: hsl(25, 100%, 3%);
+  }
+  7.2222222222% {
+    background-color: hsl(26, 100%, 3%);
+  }
+  7.5% {
+    background-color: hsl(27, 100%, 3%);
+  }
+  7.7777777778% {
+    background-color: hsl(28, 100%, 3%);
+  }
+  8.0555555556% {
+    background-color: hsl(29, 100%, 3%);
+  }
+  8.3333333333% {
+    background-color: hsl(30, 100%, 3%);
+  }
+  8.6111111111% {
+    background-color: hsl(31, 100%, 3%);
+  }
+  8.8888888889% {
+    background-color: hsl(32, 100%, 3%);
+  }
+  9.1666666667% {
+    background-color: hsl(33, 100%, 3%);
+  }
+  9.4444444444% {
+    background-color: hsl(34, 100%, 3%);
+  }
+  9.7222222222% {
+    background-color: hsl(35, 100%, 3%);
+  }
+  10% {
+    background-color: hsl(36, 100%, 3%);
+  }
+  10.2777777778% {
+    background-color: hsl(37, 100%, 3%);
+  }
+  10.5555555556% {
+    background-color: hsl(38, 100%, 3%);
+  }
+  10.8333333333% {
+    background-color: hsl(39, 100%, 3%);
+  }
+  11.1111111111% {
+    background-color: hsl(40, 100%, 3%);
+  }
+  11.3888888889% {
+    background-color: hsl(41, 100%, 3%);
+  }
+  11.6666666667% {
+    background-color: hsl(42, 100%, 3%);
+  }
+  11.9444444444% {
+    background-color: hsl(43, 100%, 3%);
+  }
+  12.2222222222% {
+    background-color: hsl(44, 100%, 3%);
+  }
+  12.5% {
+    background-color: hsl(45, 100%, 3%);
+  }
+  12.7777777778% {
+    background-color: hsl(46, 100%, 3%);
+  }
+  13.0555555556% {
+    background-color: hsl(47, 100%, 3%);
+  }
+  13.3333333333% {
+    background-color: hsl(48, 100%, 3%);
+  }
+  13.6111111111% {
+    background-color: hsl(49, 100%, 3%);
+  }
+  13.8888888889% {
+    background-color: hsl(50, 100%, 3%);
+  }
+  14.1666666667% {
+    background-color: hsl(51, 100%, 3%);
+  }
+  14.4444444444% {
+    background-color: hsl(52, 100%, 3%);
+  }
+  14.7222222222% {
+    background-color: hsl(53, 100%, 3%);
+  }
+  15% {
+    background-color: hsl(54, 100%, 3%);
+  }
+  15.2777777778% {
+    background-color: hsl(55, 100%, 3%);
+  }
+  15.5555555556% {
+    background-color: hsl(56, 100%, 3%);
+  }
+  15.8333333333% {
+    background-color: hsl(57, 100%, 3%);
+  }
+  16.1111111111% {
+    background-color: hsl(58, 100%, 3%);
+  }
+  16.3888888889% {
+    background-color: hsl(59, 100%, 3%);
+  }
+  16.6666666667% {
+    background-color: hsl(60, 100%, 3%);
+  }
+  16.9444444444% {
+    background-color: hsl(61, 100%, 3%);
+  }
+  17.2222222222% {
+    background-color: hsl(62, 100%, 3%);
+  }
+  17.5% {
+    background-color: hsl(63, 100%, 3%);
+  }
+  17.7777777778% {
+    background-color: hsl(64, 100%, 3%);
+  }
+  18.0555555556% {
+    background-color: hsl(65, 100%, 3%);
+  }
+  18.3333333333% {
+    background-color: hsl(66, 100%, 3%);
+  }
+  18.6111111111% {
+    background-color: hsl(67, 100%, 3%);
+  }
+  18.8888888889% {
+    background-color: hsl(68, 100%, 3%);
+  }
+  19.1666666667% {
+    background-color: hsl(69, 100%, 3%);
+  }
+  19.4444444444% {
+    background-color: hsl(70, 100%, 3%);
+  }
+  19.7222222222% {
+    background-color: hsl(71, 100%, 3%);
+  }
+  20% {
+    background-color: hsl(72, 100%, 3%);
+  }
+  20.2777777778% {
+    background-color: hsl(73, 100%, 3%);
+  }
+  20.5555555556% {
+    background-color: hsl(74, 100%, 3%);
+  }
+  20.8333333333% {
+    background-color: hsl(75, 100%, 3%);
+  }
+  21.1111111111% {
+    background-color: hsl(76, 100%, 3%);
+  }
+  21.3888888889% {
+    background-color: hsl(77, 100%, 3%);
+  }
+  21.6666666667% {
+    background-color: hsl(78, 100%, 3%);
+  }
+  21.9444444444% {
+    background-color: hsl(79, 100%, 3%);
+  }
+  22.2222222222% {
+    background-color: hsl(80, 100%, 3%);
+  }
+  22.5% {
+    background-color: hsl(81, 100%, 3%);
+  }
+  22.7777777778% {
+    background-color: hsl(82, 100%, 3%);
+  }
+  23.0555555556% {
+    background-color: hsl(83, 100%, 3%);
+  }
+  23.3333333333% {
+    background-color: hsl(84, 100%, 3%);
+  }
+  23.6111111111% {
+    background-color: hsl(85, 100%, 3%);
+  }
+  23.8888888889% {
+    background-color: hsl(86, 100%, 3%);
+  }
+  24.1666666667% {
+    background-color: hsl(87, 100%, 3%);
+  }
+  24.4444444444% {
+    background-color: hsl(88, 100%, 3%);
+  }
+  24.7222222222% {
+    background-color: hsl(89, 100%, 3%);
+  }
+  25% {
+    background-color: hsl(90, 100%, 3%);
+  }
+  25.2777777778% {
+    background-color: hsl(91, 100%, 3%);
+  }
+  25.5555555556% {
+    background-color: hsl(92, 100%, 3%);
+  }
+  25.8333333333% {
+    background-color: hsl(93, 100%, 3%);
+  }
+  26.1111111111% {
+    background-color: hsl(94, 100%, 3%);
+  }
+  26.3888888889% {
+    background-color: hsl(95, 100%, 3%);
+  }
+  26.6666666667% {
+    background-color: hsl(96, 100%, 3%);
+  }
+  26.9444444444% {
+    background-color: hsl(97, 100%, 3%);
+  }
+  27.2222222222% {
+    background-color: hsl(98, 100%, 3%);
+  }
+  27.5% {
+    background-color: hsl(99, 100%, 3%);
+  }
+  27.7777777778% {
+    background-color: hsl(100, 100%, 3%);
+  }
+  28.0555555556% {
+    background-color: hsl(101, 100%, 3%);
+  }
+  28.3333333333% {
+    background-color: hsl(102, 100%, 3%);
+  }
+  28.6111111111% {
+    background-color: hsl(103, 100%, 3%);
+  }
+  28.8888888889% {
+    background-color: hsl(104, 100%, 3%);
+  }
+  29.1666666667% {
+    background-color: hsl(105, 100%, 3%);
+  }
+  29.4444444444% {
+    background-color: hsl(106, 100%, 3%);
+  }
+  29.7222222222% {
+    background-color: hsl(107, 100%, 3%);
+  }
+  30% {
+    background-color: hsl(108, 100%, 3%);
+  }
+  30.2777777778% {
+    background-color: hsl(109, 100%, 3%);
+  }
+  30.5555555556% {
+    background-color: hsl(110, 100%, 3%);
+  }
+  30.8333333333% {
+    background-color: hsl(111, 100%, 3%);
+  }
+  31.1111111111% {
+    background-color: hsl(112, 100%, 3%);
+  }
+  31.3888888889% {
+    background-color: hsl(113, 100%, 3%);
+  }
+  31.6666666667% {
+    background-color: hsl(114, 100%, 3%);
+  }
+  31.9444444444% {
+    background-color: hsl(115, 100%, 3%);
+  }
+  32.2222222222% {
+    background-color: hsl(116, 100%, 3%);
+  }
+  32.5% {
+    background-color: hsl(117, 100%, 3%);
+  }
+  32.7777777778% {
+    background-color: hsl(118, 100%, 3%);
+  }
+  33.0555555556% {
+    background-color: hsl(119, 100%, 3%);
+  }
+  33.3333333333% {
+    background-color: hsl(120, 100%, 3%);
+  }
+  33.6111111111% {
+    background-color: hsl(121, 100%, 3%);
+  }
+  33.8888888889% {
+    background-color: hsl(122, 100%, 3%);
+  }
+  34.1666666667% {
+    background-color: hsl(123, 100%, 3%);
+  }
+  34.4444444444% {
+    background-color: hsl(124, 100%, 3%);
+  }
+  34.7222222222% {
+    background-color: hsl(125, 100%, 3%);
+  }
+  35% {
+    background-color: hsl(126, 100%, 3%);
+  }
+  35.2777777778% {
+    background-color: hsl(127, 100%, 3%);
+  }
+  35.5555555556% {
+    background-color: hsl(128, 100%, 3%);
+  }
+  35.8333333333% {
+    background-color: hsl(129, 100%, 3%);
+  }
+  36.1111111111% {
+    background-color: hsl(130, 100%, 3%);
+  }
+  36.3888888889% {
+    background-color: hsl(131, 100%, 3%);
+  }
+  36.6666666667% {
+    background-color: hsl(132, 100%, 3%);
+  }
+  36.9444444444% {
+    background-color: hsl(133, 100%, 3%);
+  }
+  37.2222222222% {
+    background-color: hsl(134, 100%, 3%);
+  }
+  37.5% {
+    background-color: hsl(135, 100%, 3%);
+  }
+  37.7777777778% {
+    background-color: hsl(136, 100%, 3%);
+  }
+  38.0555555556% {
+    background-color: hsl(137, 100%, 3%);
+  }
+  38.3333333333% {
+    background-color: hsl(138, 100%, 3%);
+  }
+  38.6111111111% {
+    background-color: hsl(139, 100%, 3%);
+  }
+  38.8888888889% {
+    background-color: hsl(140, 100%, 3%);
+  }
+  39.1666666667% {
+    background-color: hsl(141, 100%, 3%);
+  }
+  39.4444444444% {
+    background-color: hsl(142, 100%, 3%);
+  }
+  39.7222222222% {
+    background-color: hsl(143, 100%, 3%);
+  }
+  40% {
+    background-color: hsl(144, 100%, 3%);
+  }
+  40.2777777778% {
+    background-color: hsl(145, 100%, 3%);
+  }
+  40.5555555556% {
+    background-color: hsl(146, 100%, 3%);
+  }
+  40.8333333333% {
+    background-color: hsl(147, 100%, 3%);
+  }
+  41.1111111111% {
+    background-color: hsl(148, 100%, 3%);
+  }
+  41.3888888889% {
+    background-color: hsl(149, 100%, 3%);
+  }
+  41.6666666667% {
+    background-color: hsl(150, 100%, 3%);
+  }
+  41.9444444444% {
+    background-color: hsl(151, 100%, 3%);
+  }
+  42.2222222222% {
+    background-color: hsl(152, 100%, 3%);
+  }
+  42.5% {
+    background-color: hsl(153, 100%, 3%);
+  }
+  42.7777777778% {
+    background-color: hsl(154, 100%, 3%);
+  }
+  43.0555555556% {
+    background-color: hsl(155, 100%, 3%);
+  }
+  43.3333333333% {
+    background-color: hsl(156, 100%, 3%);
+  }
+  43.6111111111% {
+    background-color: hsl(157, 100%, 3%);
+  }
+  43.8888888889% {
+    background-color: hsl(158, 100%, 3%);
+  }
+  44.1666666667% {
+    background-color: hsl(159, 100%, 3%);
+  }
+  44.4444444444% {
+    background-color: hsl(160, 100%, 3%);
+  }
+  44.7222222222% {
+    background-color: hsl(161, 100%, 3%);
+  }
+  45% {
+    background-color: hsl(162, 100%, 3%);
+  }
+  45.2777777778% {
+    background-color: hsl(163, 100%, 3%);
+  }
+  45.5555555556% {
+    background-color: hsl(164, 100%, 3%);
+  }
+  45.8333333333% {
+    background-color: hsl(165, 100%, 3%);
+  }
+  46.1111111111% {
+    background-color: hsl(166, 100%, 3%);
+  }
+  46.3888888889% {
+    background-color: hsl(167, 100%, 3%);
+  }
+  46.6666666667% {
+    background-color: hsl(168, 100%, 3%);
+  }
+  46.9444444444% {
+    background-color: hsl(169, 100%, 3%);
+  }
+  47.2222222222% {
+    background-color: hsl(170, 100%, 3%);
+  }
+  47.5% {
+    background-color: hsl(171, 100%, 3%);
+  }
+  47.7777777778% {
+    background-color: hsl(172, 100%, 3%);
+  }
+  48.0555555556% {
+    background-color: hsl(173, 100%, 3%);
+  }
+  48.3333333333% {
+    background-color: hsl(174, 100%, 3%);
+  }
+  48.6111111111% {
+    background-color: hsl(175, 100%, 3%);
+  }
+  48.8888888889% {
+    background-color: hsl(176, 100%, 3%);
+  }
+  49.1666666667% {
+    background-color: hsl(177, 100%, 3%);
+  }
+  49.4444444444% {
+    background-color: hsl(178, 100%, 3%);
+  }
+  49.7222222222% {
+    background-color: hsl(179, 100%, 3%);
+  }
+  50% {
+    background-color: hsl(180, 100%, 3%);
+  }
+  50.2777777778% {
+    background-color: hsl(181, 100%, 3%);
+  }
+  50.5555555556% {
+    background-color: hsl(182, 100%, 3%);
+  }
+  50.8333333333% {
+    background-color: hsl(183, 100%, 3%);
+  }
+  51.1111111111% {
+    background-color: hsl(184, 100%, 3%);
+  }
+  51.3888888889% {
+    background-color: hsl(185, 100%, 3%);
+  }
+  51.6666666667% {
+    background-color: hsl(186, 100%, 3%);
+  }
+  51.9444444444% {
+    background-color: hsl(187, 100%, 3%);
+  }
+  52.2222222222% {
+    background-color: hsl(188, 100%, 3%);
+  }
+  52.5% {
+    background-color: hsl(189, 100%, 3%);
+  }
+  52.7777777778% {
+    background-color: hsl(190, 100%, 3%);
+  }
+  53.0555555556% {
+    background-color: hsl(191, 100%, 3%);
+  }
+  53.3333333333% {
+    background-color: hsl(192, 100%, 3%);
+  }
+  53.6111111111% {
+    background-color: hsl(193, 100%, 3%);
+  }
+  53.8888888889% {
+    background-color: hsl(194, 100%, 3%);
+  }
+  54.1666666667% {
+    background-color: hsl(195, 100%, 3%);
+  }
+  54.4444444444% {
+    background-color: hsl(196, 100%, 3%);
+  }
+  54.7222222222% {
+    background-color: hsl(197, 100%, 3%);
+  }
+  55% {
+    background-color: hsl(198, 100%, 3%);
+  }
+  55.2777777778% {
+    background-color: hsl(199, 100%, 3%);
+  }
+  55.5555555556% {
+    background-color: hsl(200, 100%, 3%);
+  }
+  55.8333333333% {
+    background-color: hsl(201, 100%, 3%);
+  }
+  56.1111111111% {
+    background-color: hsl(202, 100%, 3%);
+  }
+  56.3888888889% {
+    background-color: hsl(203, 100%, 3%);
+  }
+  56.6666666667% {
+    background-color: hsl(204, 100%, 3%);
+  }
+  56.9444444444% {
+    background-color: hsl(205, 100%, 3%);
+  }
+  57.2222222222% {
+    background-color: hsl(206, 100%, 3%);
+  }
+  57.5% {
+    background-color: hsl(207, 100%, 3%);
+  }
+  57.7777777778% {
+    background-color: hsl(208, 100%, 3%);
+  }
+  58.0555555556% {
+    background-color: hsl(209, 100%, 3%);
+  }
+  58.3333333333% {
+    background-color: hsl(210, 100%, 3%);
+  }
+  58.6111111111% {
+    background-color: hsl(211, 100%, 3%);
+  }
+  58.8888888889% {
+    background-color: hsl(212, 100%, 3%);
+  }
+  59.1666666667% {
+    background-color: hsl(213, 100%, 3%);
+  }
+  59.4444444444% {
+    background-color: hsl(214, 100%, 3%);
+  }
+  59.7222222222% {
+    background-color: hsl(215, 100%, 3%);
+  }
+  60% {
+    background-color: hsl(216, 100%, 3%);
+  }
+  60.2777777778% {
+    background-color: hsl(217, 100%, 3%);
+  }
+  60.5555555556% {
+    background-color: hsl(218, 100%, 3%);
+  }
+  60.8333333333% {
+    background-color: hsl(219, 100%, 3%);
+  }
+  61.1111111111% {
+    background-color: hsl(220, 100%, 3%);
+  }
+  61.3888888889% {
+    background-color: hsl(221, 100%, 3%);
+  }
+  61.6666666667% {
+    background-color: hsl(222, 100%, 3%);
+  }
+  61.9444444444% {
+    background-color: hsl(223, 100%, 3%);
+  }
+  62.2222222222% {
+    background-color: hsl(224, 100%, 3%);
+  }
+  62.5% {
+    background-color: hsl(225, 100%, 3%);
+  }
+  62.7777777778% {
+    background-color: hsl(226, 100%, 3%);
+  }
+  63.0555555556% {
+    background-color: hsl(227, 100%, 3%);
+  }
+  63.3333333333% {
+    background-color: hsl(228, 100%, 3%);
+  }
+  63.6111111111% {
+    background-color: hsl(229, 100%, 3%);
+  }
+  63.8888888889% {
+    background-color: hsl(230, 100%, 3%);
+  }
+  64.1666666667% {
+    background-color: hsl(231, 100%, 3%);
+  }
+  64.4444444444% {
+    background-color: hsl(232, 100%, 3%);
+  }
+  64.7222222222% {
+    background-color: hsl(233, 100%, 3%);
+  }
+  65% {
+    background-color: hsl(234, 100%, 3%);
+  }
+  65.2777777778% {
+    background-color: hsl(235, 100%, 3%);
+  }
+  65.5555555556% {
+    background-color: hsl(236, 100%, 3%);
+  }
+  65.8333333333% {
+    background-color: hsl(237, 100%, 3%);
+  }
+  66.1111111111% {
+    background-color: hsl(238, 100%, 3%);
+  }
+  66.3888888889% {
+    background-color: hsl(239, 100%, 3%);
+  }
+  66.6666666667% {
+    background-color: hsl(240, 100%, 3%);
+  }
+  66.9444444444% {
+    background-color: hsl(241, 100%, 3%);
+  }
+  67.2222222222% {
+    background-color: hsl(242, 100%, 3%);
+  }
+  67.5% {
+    background-color: hsl(243, 100%, 3%);
+  }
+  67.7777777778% {
+    background-color: hsl(244, 100%, 3%);
+  }
+  68.0555555556% {
+    background-color: hsl(245, 100%, 3%);
+  }
+  68.3333333333% {
+    background-color: hsl(246, 100%, 3%);
+  }
+  68.6111111111% {
+    background-color: hsl(247, 100%, 3%);
+  }
+  68.8888888889% {
+    background-color: hsl(248, 100%, 3%);
+  }
+  69.1666666667% {
+    background-color: hsl(249, 100%, 3%);
+  }
+  69.4444444444% {
+    background-color: hsl(250, 100%, 3%);
+  }
+  69.7222222222% {
+    background-color: hsl(251, 100%, 3%);
+  }
+  70% {
+    background-color: hsl(252, 100%, 3%);
+  }
+  70.2777777778% {
+    background-color: hsl(253, 100%, 3%);
+  }
+  70.5555555556% {
+    background-color: hsl(254, 100%, 3%);
+  }
+  70.8333333333% {
+    background-color: hsl(255, 100%, 3%);
+  }
+  71.1111111111% {
+    background-color: hsl(256, 100%, 3%);
+  }
+  71.3888888889% {
+    background-color: hsl(257, 100%, 3%);
+  }
+  71.6666666667% {
+    background-color: hsl(258, 100%, 3%);
+  }
+  71.9444444444% {
+    background-color: hsl(259, 100%, 3%);
+  }
+  72.2222222222% {
+    background-color: hsl(260, 100%, 3%);
+  }
+  72.5% {
+    background-color: hsl(261, 100%, 3%);
+  }
+  72.7777777778% {
+    background-color: hsl(262, 100%, 3%);
+  }
+  73.0555555556% {
+    background-color: hsl(263, 100%, 3%);
+  }
+  73.3333333333% {
+    background-color: hsl(264, 100%, 3%);
+  }
+  73.6111111111% {
+    background-color: hsl(265, 100%, 3%);
+  }
+  73.8888888889% {
+    background-color: hsl(266, 100%, 3%);
+  }
+  74.1666666667% {
+    background-color: hsl(267, 100%, 3%);
+  }
+  74.4444444444% {
+    background-color: hsl(268, 100%, 3%);
+  }
+  74.7222222222% {
+    background-color: hsl(269, 100%, 3%);
+  }
+  75% {
+    background-color: hsl(270, 100%, 3%);
+  }
+  75.2777777778% {
+    background-color: hsl(271, 100%, 3%);
+  }
+  75.5555555556% {
+    background-color: hsl(272, 100%, 3%);
+  }
+  75.8333333333% {
+    background-color: hsl(273, 100%, 3%);
+  }
+  76.1111111111% {
+    background-color: hsl(274, 100%, 3%);
+  }
+  76.3888888889% {
+    background-color: hsl(275, 100%, 3%);
+  }
+  76.6666666667% {
+    background-color: hsl(276, 100%, 3%);
+  }
+  76.9444444444% {
+    background-color: hsl(277, 100%, 3%);
+  }
+  77.2222222222% {
+    background-color: hsl(278, 100%, 3%);
+  }
+  77.5% {
+    background-color: hsl(279, 100%, 3%);
+  }
+  77.7777777778% {
+    background-color: hsl(280, 100%, 3%);
+  }
+  78.0555555556% {
+    background-color: hsl(281, 100%, 3%);
+  }
+  78.3333333333% {
+    background-color: hsl(282, 100%, 3%);
+  }
+  78.6111111111% {
+    background-color: hsl(283, 100%, 3%);
+  }
+  78.8888888889% {
+    background-color: hsl(284, 100%, 3%);
+  }
+  79.1666666667% {
+    background-color: hsl(285, 100%, 3%);
+  }
+  79.4444444444% {
+    background-color: hsl(286, 100%, 3%);
+  }
+  79.7222222222% {
+    background-color: hsl(287, 100%, 3%);
+  }
+  80% {
+    background-color: hsl(288, 100%, 3%);
+  }
+  80.2777777778% {
+    background-color: hsl(289, 100%, 3%);
+  }
+  80.5555555556% {
+    background-color: hsl(290, 100%, 3%);
+  }
+  80.8333333333% {
+    background-color: hsl(291, 100%, 3%);
+  }
+  81.1111111111% {
+    background-color: hsl(292, 100%, 3%);
+  }
+  81.3888888889% {
+    background-color: hsl(293, 100%, 3%);
+  }
+  81.6666666667% {
+    background-color: hsl(294, 100%, 3%);
+  }
+  81.9444444444% {
+    background-color: hsl(295, 100%, 3%);
+  }
+  82.2222222222% {
+    background-color: hsl(296, 100%, 3%);
+  }
+  82.5% {
+    background-color: hsl(297, 100%, 3%);
+  }
+  82.7777777778% {
+    background-color: hsl(298, 100%, 3%);
+  }
+  83.0555555556% {
+    background-color: hsl(299, 100%, 3%);
+  }
+  83.3333333333% {
+    background-color: hsl(300, 100%, 3%);
+  }
+  83.6111111111% {
+    background-color: hsl(301, 100%, 3%);
+  }
+  83.8888888889% {
+    background-color: hsl(302, 100%, 3%);
+  }
+  84.1666666667% {
+    background-color: hsl(303, 100%, 3%);
+  }
+  84.4444444444% {
+    background-color: hsl(304, 100%, 3%);
+  }
+  84.7222222222% {
+    background-color: hsl(305, 100%, 3%);
+  }
+  85% {
+    background-color: hsl(306, 100%, 3%);
+  }
+  85.2777777778% {
+    background-color: hsl(307, 100%, 3%);
+  }
+  85.5555555556% {
+    background-color: hsl(308, 100%, 3%);
+  }
+  85.8333333333% {
+    background-color: hsl(309, 100%, 3%);
+  }
+  86.1111111111% {
+    background-color: hsl(310, 100%, 3%);
+  }
+  86.3888888889% {
+    background-color: hsl(311, 100%, 3%);
+  }
+  86.6666666667% {
+    background-color: hsl(312, 100%, 3%);
+  }
+  86.9444444444% {
+    background-color: hsl(313, 100%, 3%);
+  }
+  87.2222222222% {
+    background-color: hsl(314, 100%, 3%);
+  }
+  87.5% {
+    background-color: hsl(315, 100%, 3%);
+  }
+  87.7777777778% {
+    background-color: hsl(316, 100%, 3%);
+  }
+  88.0555555556% {
+    background-color: hsl(317, 100%, 3%);
+  }
+  88.3333333333% {
+    background-color: hsl(318, 100%, 3%);
+  }
+  88.6111111111% {
+    background-color: hsl(319, 100%, 3%);
+  }
+  88.8888888889% {
+    background-color: hsl(320, 100%, 3%);
+  }
+  89.1666666667% {
+    background-color: hsl(321, 100%, 3%);
+  }
+  89.4444444444% {
+    background-color: hsl(322, 100%, 3%);
+  }
+  89.7222222222% {
+    background-color: hsl(323, 100%, 3%);
+  }
+  90% {
+    background-color: hsl(324, 100%, 3%);
+  }
+  90.2777777778% {
+    background-color: hsl(325, 100%, 3%);
+  }
+  90.5555555556% {
+    background-color: hsl(326, 100%, 3%);
+  }
+  90.8333333333% {
+    background-color: hsl(327, 100%, 3%);
+  }
+  91.1111111111% {
+    background-color: hsl(328, 100%, 3%);
+  }
+  91.3888888889% {
+    background-color: hsl(329, 100%, 3%);
+  }
+  91.6666666667% {
+    background-color: hsl(330, 100%, 3%);
+  }
+  91.9444444444% {
+    background-color: hsl(331, 100%, 3%);
+  }
+  92.2222222222% {
+    background-color: hsl(332, 100%, 3%);
+  }
+  92.5% {
+    background-color: hsl(333, 100%, 3%);
+  }
+  92.7777777778% {
+    background-color: hsl(334, 100%, 3%);
+  }
+  93.0555555556% {
+    background-color: hsl(335, 100%, 3%);
+  }
+  93.3333333333% {
+    background-color: hsl(336, 100%, 3%);
+  }
+  93.6111111111% {
+    background-color: hsl(337, 100%, 3%);
+  }
+  93.8888888889% {
+    background-color: hsl(338, 100%, 3%);
+  }
+  94.1666666667% {
+    background-color: hsl(339, 100%, 3%);
+  }
+  94.4444444444% {
+    background-color: hsl(340, 100%, 3%);
+  }
+  94.7222222222% {
+    background-color: hsl(341, 100%, 3%);
+  }
+  95% {
+    background-color: hsl(342, 100%, 3%);
+  }
+  95.2777777778% {
+    background-color: hsl(343, 100%, 3%);
+  }
+  95.5555555556% {
+    background-color: hsl(344, 100%, 3%);
+  }
+  95.8333333333% {
+    background-color: hsl(345, 100%, 3%);
+  }
+  96.1111111111% {
+    background-color: hsl(346, 100%, 3%);
+  }
+  96.3888888889% {
+    background-color: hsl(347, 100%, 3%);
+  }
+  96.6666666667% {
+    background-color: hsl(348, 100%, 3%);
+  }
+  96.9444444444% {
+    background-color: hsl(349, 100%, 3%);
+  }
+  97.2222222222% {
+    background-color: hsl(350, 100%, 3%);
+  }
+  97.5% {
+    background-color: hsl(351, 100%, 3%);
+  }
+  97.7777777778% {
+    background-color: hsl(352, 100%, 3%);
+  }
+  98.0555555556% {
+    background-color: hsl(353, 100%, 3%);
+  }
+  98.3333333333% {
+    background-color: hsl(354, 100%, 3%);
+  }
+  98.6111111111% {
+    background-color: hsl(355, 100%, 3%);
+  }
+  98.8888888889% {
+    background-color: hsl(356, 100%, 3%);
+  }
+  99.1666666667% {
+    background-color: hsl(357, 100%, 3%);
+  }
+  99.4444444444% {
+    background-color: hsl(358, 100%, 3%);
+  }
+  99.7222222222% {
+    background-color: hsl(359, 100%, 3%);
+  }
+  100% {
+    background-color: hsl(0, 100%, 3%);
+  }
+}
+@media (width > 1800px) {
+  :root {
+    --banner-multiplier: 12;
+  }
+  .name {
+    font-size: 12rem;
+    line-height: 6rem;
+  }
+  .container {
+    padding: 50px;
+    width: 1200px;
+  }
+  .links {
+    column-gap: 25px;
+  }
+  .container {
+    gap: 25px;
+  }
+  .link {
+    font-size: 4rem;
+    line-height: 2rem;
+  }
+  .about > p {
+    font-size: 6rem;
+    line-height: 4rem;
+  }
+}
+@media (width < 400px) {
+  .about > p {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
