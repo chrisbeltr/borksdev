@@ -1222,7 +1222,7 @@ body {
     background-color: hsl(0, 100%, 3%);
   }
 }
-@media (width > 1800px) {
+@media (width > 2000px) {
   :root {
     --banner-multiplier: 12;
   }
