@@ -43,6 +43,15 @@ body {
   user-select: none;
 }
 
+.webrings {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .container {
   padding: 20px;
   margin: 20px;
