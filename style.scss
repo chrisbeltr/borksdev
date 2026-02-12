@@ -113,27 +113,27 @@ body {
 }
 
 /* colors */
-#y {
+.y {
   color: #ffff91;
 }
 
-#r {
+.r {
   color: #ff9191;
 }
 
-#b {
+.b {
   color: #6bb8ff;
 }
 
-#p {
+.p {
   color: #ff91e4;
 }
 
-#m {
+.m {
   color: #91ff99;
 }
 
-#o {
+.o {
   color: #ffc891;
 }
 
@@ -149,7 +149,7 @@ body {
 
 @keyframes background {
   @for $i from 0 through 360 {
-    #{calc($i / 3.6)}% {
+    #{$i / 3.6}% {
       background-color: hsl($i, 100%, 3%);
     }
   }
